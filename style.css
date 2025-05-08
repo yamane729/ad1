@@ -1,0 +1,292 @@
+* {
+}
+
+body {
+    background-color: bisque;
+    font-family: "Kaisei Decol", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: auto;
+}
+
+ul {
+    list-style:none;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: brown; 
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+.header_flex {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    float: left;
+}
+
+.header_flex h3 {
+    padding: 20px 30px 20px 30px;
+    margin-left: 10%;
+    border: ridge;
+    border-radius: 10px;
+    background-color: burlywood;
+    color: blueviolet;
+
+}
+.header_flex li {
+    float: left;
+    padding: 15px 10px 15px 10px;
+    margin-left: 2%;
+    border: ridge;
+    border-radius: 10px;
+    background-color: burlywood;
+}
+
+.header_flex nav {
+    width: 100%;
+    margin-left: 27%;
+}
+
+
+
+.kasaneru1 {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.gen {
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    display: block;
+    border: ridge;
+    border-color: black;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background-size: cover;
+    background-position: center center;
+    
+    animation: image-switch-animation 15s infinite;
+  }
+
+
+.gengengen {
+    width: 80%;
+    height:70%;
+    margin-top: 130px;
+}
+
+.kasaneru1 p {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size:60px;
+    color: black;
+    padding-top: 30px;
+    margin: 0;
+}
+
+@keyframes image-switch-animation {
+    0%{ opacity: 0;}
+    5%{ opacity: 1;}
+    25%{ opacity: 1;}
+    85%{ opacity: 0;}
+    100%{ opacity: 0;}
+  }
+
+  .gen:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  .gen:nth-of-type(2) {
+    animation-delay: 5s;
+  }
+  .gen:nth-of-type(3) {
+    animation-delay: 10s;
+  }
+  
+.help nav {
+    position: absolute;
+    top:50%;
+    left:80%;
+    transform: translate(-50%,-50%);
+    font-size:30px;
+    color: black;
+    padding-top: 30px;
+    margin: 0;
+}
+
+.help li {
+    border: groove;
+    margin: 15px;
+    text-align: center;
+    background-color: burlywood;
+}
+
+.titlekun {
+    color: blueviolet;
+}
+
+.hirosimatext {
+    color: black;
+    margin-right: 20%;
+    margin-left: 10%;
+    margin-top: -3%;
+}
+
+.hirotext {
+    margin-top: -1%;
+}
+
+.kasaneru2 {
+    position: relative;
+    margin-top: 40px;
+
+}
+
+.kasaneru2 img {
+    width: 80%;
+}
+
+
+.kasaneru2 li {
+    position: absolute;
+    top:0%;
+    left:10%;
+    transform: translate(-50%,-50%);
+    font-size:30px;
+    margin: 0;
+    margin-left: 30px;
+    border: ridge;
+    border-color: black;
+    background-color: burlywood;
+    color: blueviolet;
+}
+
+#plan {
+    padding-top: 120px;
+    margin-top: -120px;
+    color: bisque;
+}
+
+.hirosimanan {
+    width: auto;
+    margin-left: 17%;
+}
+
+a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+@media (max-width: 768px) {
+
+    * {
+        padding: 0%;
+        margin: 0%;
+    }
+    html {
+    }
+    body {
+        width: 100%;
+    }
+    header {
+        padding-left: 20px;
+        width: 100%;
+        height: 70px;
+    }
+    .header_flex h3 {
+        padding: 10px 25px 10px 25px;
+        margin-left: 0px;
+        font-size: 10px;
+ }
+
+    header li {
+        font-size: 10px;
+        display: none;
+    }
+
+
+
+
+    .gen {
+        width: 80%;
+        height: 50%;
+        margin: auto;
+        margin-top: 140px;
+    }
+    .gengengen {
+        width: 80%;
+        height: 50%;
+        margin: auto;
+        margin-top: 140px;
+    }
+
+    .kasaneru1 {
+        margin-top: -50px;
+        margin-left: 35px;
+        width: 293px;
+        text-align: center;
+        align-items: center;
+    }
+    .kasaneru1 p {
+        position: absolute;
+        top:65%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        font-size:25px;
+        color: black;
+        padding-top: 40px;
+        margin: 0;
+    }
+
+    .help {
+        display: none;
+    }
+    
+    .kasaneru2 {
+        margin-top: 30px;
+        width: auto;
+    }
+
+    .kasaneru2 li {
+        font-size:20px
+        
+    }
+    
+    .hirosimanan {
+        width: 80%;
+        height: 50%;
+        margin-left: 38px;
+    }
+    .hirosimatext {
+        margin-top: 10%;
+        margin-right: 2%;
+        margin-left: 5%;
+        font-size: 85%;
+        }
+    
+    br {
+        display: none;
+    }
+ @media (max-width: 480px) {
+
+ }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* 画像のスタイル */
+        #myImage {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw; /* 画面の幅に合わせる */
+            height: 100vh; /* 画面の高さに合わせる */
+            object-fit: cover; /* 画像が縦横比を保ったまま画面全体にフィット */
+            z-index: 1000; /* 他の要素より前に表示 */
+        }
+
+        /* 画像を閉じるボタン */
+        #closeButton {
+            display: none;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+    </style>
+    <script>
+        function showImage() {
+            playSound('myAudio');
+            var img = document.getElementById('myImage');
+            var closeButton = document.getElementById('closeButton');
+            img.style.display = 'block';
+            closeButton.style.display = 'block';
+        }
+        
+        function hideImage() {
+            var img = document.getElementById('myImage');
+            var closeButton = document.getElementById('closeButton');
+            img.style.display = 'none';
+            closeButton.style.display = 'none';
+            playSound('closeAudio');
+        }
+
+        function playSound(audioId) {
+            var audio = document.getElementById(audioId);
+            audio.play();
+        }
+    </script>
+
+    <title>よくある質問</title>
+    <link rel="stylesheet" href="../basuyoyaku/styless.css"> <!-- 外部CSSファイルをリンク -->
+</head>
+<body>
+    <h1>よくある質問</h1>
+    <h2>Q.幽霊は出てきますか？</h2>
+    <h2>A.幽霊の目撃情報はありません。</h2>
+    <h3></h3>
+    <h2>Q.喫煙所の有無を確認したいです</h2>
+    <h2>A.喫煙所はありません。</h2>
+    <h3></h3>
+    <h2>Q.キャンセル料がとられるのは何日前からですか？</h2>
+    <h2>A.1年半前からのキャンセルは無料で行っております。</h2>
+    <h3></h3>
+    <h2>Q.温泉が開いてる時間は何時までですか？</h2>
+    <h2>A.当旅館は２４時間営業になっております。</h2>
+    <h3></h3>
+
+
+    <button onclick="showImage()">押してね💗</button>
+
+    <!-- 全画面表示される画像 -->
+    <img id="myImage" src="../onyuu/unnamed.webp" alt=クリックして表示された画像">
+
+    <!-- 音声ファイル -->
+    <audio id="myAudio">
+        <source src="../onyuu/himei_kyaa_reverb.wav" type="audio/mpeg">
+        お使いのブラウザではオーディオ要素がサポートされていません。
+    </audio>
+
+    <!-- 新しい音声ファイル（閉じるボタン用） -->
+    <audio id="closeAudio">
+        <source src="../onyuu/不穏.mp3" type="audio/mpeg">
+        お使いのブラウザではオーディオ要素がサポートされていません。
+    </audio>
+
+ <!-- 画像を閉じるためのボタン -->
+ <button id="closeButton" onclick="hideImage()">閉じる</button>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>contact</title>
+</head>
+<body>
+
+    <header>
+        <h1>お問い合わせフォーム</h1>
+    </header>
+    <main>
+
+
+        <!-- ===================お問い合わせの項目=================== -->
+
+        <form action="test.php" method="post">
+            <div id="contact">
+
+                <div class="contactItems">
+                    <label id="labelEmail" for="email" class="labelItems">メールアドレス</label>
+                    <input type="email" id="email" name="email" size="40" placeholder="example12345@abc.xyz">
+                </div>
+
+                <div class="contactItems">
+                    <label id="labelContactType" for="radio1" class="labelItems">お問い合わせ種別</label>
+                    <div class="radioItems">
+                        <input type="radio" id="reservation" name="radio" value="reservation" checked>
+                        <label for="reservation">予約に関する問い合わせ</label>
+                    </div>
+                    
+                    <div class="radioItems">
+                        <input type="radio" id="payment" name="radio" value="payment">
+                        <label for="payment">料金や支払いに関する問い合わせ</label>
+                    </div>
+                    <div class="radioItems">
+                        <input type="radio" id="tour" name="radio" value="tour">
+                        <label for="tour">ツアーに関する問い合わせ</label>
+                    </div>
+                    <div class="radioItems">
+                        <input type="radio" id="other" name="radio" value="other">
+                        <label for="other">その他</label>
+                    </div>
+                </div>
+
+                <div class="contactItems">
+                    <label id="labelSubject" for="subject" class="labelItems">件名</label>
+                    <input type="text" id="subject" name="subject" size="70" placeholder="お問い合わせの概要をご記入ください">
+                </div>
+
+                <div class="contactItems">
+                    <label id="labelContent" for="content" class="labelItems">お問い合わせ内容</label>
+                    <textarea id="content" name="content" rows="15" cols="70" placeholder="お問い合わせ内容の詳細をご記入ください"></textarea>
+                </div>
+
+                <div class="contactItems">
+                    <label id="labelFile" for="file" class="labelItems">添付ファイル</label>
+                    <input type="file" id="file" name="file">
+                </div>
+
+            </div>
+
+            <div id="divSubmit">
+                <input type="submit" id="submit" value="送信する">
+            </div>
+        </form>
+
+        <!-- ===================お問い合わせの項目 終了=================== -->
+
+
+    </main>
+</body>
+</html>

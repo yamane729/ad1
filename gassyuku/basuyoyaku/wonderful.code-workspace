@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../../wonderful"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../合宿"
+		},
+		{
+			"path": "../../../tunematu"
+		},
+		{
+			"path": "../../../ajiki"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "hirosima"
+	}
+}
